@@ -1,0 +1,97 @@
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+/* Start the navbar */
+@import "navbar";
+/* End the navbar */
+/* ############################################## */
+
+/* Start Head */
+.features-head {
+   position: relative;
+   .container {
+      @include d-grid(1fr 1fr, 20px, null, center);
+      img {
+         width: 200px;
+         justify-self: end;
+      }
+   }
+
+   // SVG
+   .custom-shape-divider-bottom-1612844937 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      svg {
+         position: relative;
+         display: block;
+         width: calc(100% + 1.3px);
+         height: 55px;
+      }
+      .shape-fill {
+         fill: $light-color;
+      }
+   }
+}
+/* End Head */
+/* ############################################ */
+
+/* Start sub-head */
+.features-sub-head {
+   position: relative;
+   .container {
+      @include d-grid(1fr 1fr, 20px, null, center);
+      img {
+         width: 300px;
+         justify-self: end;
+      }
+   }
+
+   // SVG
+   .custom-shape-divider-bottom-1612845191 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+      svg {
+         position: relative;
+         display: block;
+         width: calc(116% + 1.3px);
+         height: 55px;
+      }
+      .shape-fill {
+         fill: #ffffff;
+      }
+   }
+}
+/* End sub-head */
+/* ############################################# */
+
+/* Start features-main */
+.features-main .container {
+   @include d-grid(1fr 1fr 1fr, 20px);
+   .card {
+      padding: 25px;
+      @include d-grid(auto 1fr, 20px, null, center);
+      &-1 {
+         grid-column: 1 / -1;
+      }
+      &-2 {
+         grid-column: 1 / span 2;
+      }
+   }
+}
+/* End features-main */
+/* ############################################## */
+
+@import "footer";
+
+// import the file of media queries.
+@import "featuresPageMediaQueries";

@@ -1,0 +1,9 @@
+footer {
+   .container {
+      @include d-grid(1fr 1fr 1fr, 20px, center);
+   }
+   .social {
+      @include d-grid(1fr 1fr 1fr 1fr, 1.5rem);
+      width: max-content;
+   }
+}

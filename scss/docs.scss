@@ -1,0 +1,68 @@
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+/* Start the navbar */
+@import "navbar";
+/* End the navbar */
+/* ############################################## */
+
+/* Start Head */
+.docs-head {
+   position: relative;
+   .container {
+      @include d-grid(1fr 1fr, 20px, null, center);
+      img {
+         width: 200px;
+         justify-self: end;
+      }
+   }
+
+   // SVG
+   .custom-shape-divider-bottom-1612844937 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      svg {
+         position: relative;
+         display: block;
+         width: calc(100% + 1.3px);
+         height: 55px;
+      }
+      .shape-fill {
+         fill: $white;
+      }
+   }
+}
+/* End Head */
+/* ############################################ */
+
+/* Start .docs-main */
+.docs-main .container {
+   @include d-grid(1fr 2fr, 40px, null, start);
+   nav li {
+      font-size: 17px;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #ccc;
+      a:hover {
+         font-weight: bold;
+      }
+   }
+
+   pre {
+      @include d-flex(flex-start, center);
+      background-color: $dark-grey-color;
+      color: $white;
+      padding: 10px 0 10px 20px;
+   }
+}
+/* End .docs-main */
+
+@import "footer";
+
+// import the file of media queries
+@import "docsPageMediaQueries";

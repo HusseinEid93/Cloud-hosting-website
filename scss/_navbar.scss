@@ -1,0 +1,15 @@
+.navbar {
+   height: 70px;
+   .container {
+      @include d-flex(space-between, center);
+   }
+   ul {
+      @include d-grid(auto auto auto, 2rem);
+      a {
+         padding: 5px 0;
+         &:hover {
+            border-bottom: 2px solid $white;
+         }
+      }
+   }
+}

@@ -1,0 +1,200 @@
+@import "variables";
+@import "mixins";
+@import "utilities";
+
+/* Start the navbar */
+@import "navbar";
+/* End the navbar */
+/* ############################################## */
+
+/* Start .showcase */
+.showcase {
+   height: 400px;
+   position: relative;
+
+   .container {
+      @include d-grid(1.3fr 1fr, 30px, center, center);
+      h1 {
+         font-size: 40px;
+      }
+      p {
+         margin: 20px 0;
+      }
+      .showcase-form {
+         position: relative;
+         top: 60px;
+         height: 350px;
+         padding: 40px;
+         z-index: 100;
+         .form-control {
+            margin: 30px 0;
+         }
+         input:not([type="submit"]) {
+            border: 0;
+            border-bottom: 1px solid #b4becb;
+            width: 100%;
+            padding: 5px;
+            font-size: 1rem;
+            &:focus {
+               outline: none;
+            }
+         }
+         input {
+            font-family: inherit;
+         }
+      }
+   }
+
+   /* Styling the SVG */
+   .custom-shape-divider-bottom-1612755993 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      svg {
+         position: relative;
+         display: block;
+         width: calc(100% + 1.3px);
+         height: 69px;
+         transform: rotateY(180deg);
+      }
+      .shape-fill {
+         fill: #ffffff;
+      }
+   }
+}
+/* End .showcase */
+/* ################################################# */
+
+/* Start Stats */
+.stats {
+   margin-top: 100px;
+   &-heading {
+      max-width: 500px;
+      margin: auto;
+      font-size: 1.1rem;
+   }
+   .grid {
+      @include d-grid(1fr 1fr 1fr, 20px);
+      > div {
+         @include d-flex(center, center, column);
+      }
+      h3 {
+         font-size: 35px;
+      }
+      p {
+         font-size: 20px;
+         font-weight: bold;
+         color: darken($primary-color, 15);
+      }
+   }
+}
+/* End Stats */
+/* ################################################ */
+
+/* Start cli section */
+.cli {
+   .container {
+      @include d-grid(1fr 1fr 1fr, 20px, null, center);
+      grid-template-rows: 1fr 1fr;
+      > img {
+         grid-area: 1 / 1 / span 2 / span 2;
+      }
+   }
+}
+/* End cli section */
+/* ################################################ */
+
+/* Start clouds section */
+.cloud {
+   position: relative;
+
+   // Top SVG
+   .custom-shape-divider-top-1612775829 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+      svg {
+         position: relative;
+         display: block;
+         width: calc(125% + 1.3px);
+         height: 64px;
+         transform: rotateY(180deg);
+      }
+      .shape-fill {
+         fill: #ffffff;
+      }
+   }
+
+   .container {
+      @include d-grid(4fr 3fr, 20px, null, center);
+      color: $white;
+      h1 {
+         text-transform: capitalize;
+      }
+   }
+
+   // Bottom SVG
+   .custom-shape-divider-bottom-1612775866 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      svg {
+         position: relative;
+         display: block;
+         width: calc(125% + 1.3px);
+         height: 64px;
+         transform: rotateY(180deg);
+      }
+      .shape-fill {
+         fill: #ffffff;
+      }
+   }
+}
+/* End clouds section */
+/* ################################################ */
+
+/* Start languages section */
+.languages {
+   margin-bottom: 3rem;
+   > h2 {
+      margin-bottom: 2rem;
+   }
+   .container {
+      @include d-grid(1fr 1fr 1fr 1fr 1fr 1fr 1fr, 1.5rem);
+      > div {
+         @include d-flex(space-evenly, stretch, column);
+         transition: transform 0.3s ease-in;
+         h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+         }
+         img {
+            object-fit: scale-down;
+         }
+         &:hover {
+            transform: translateY(-15px);
+         }
+      }
+   }
+}
+/* End languages section */
+/* ############################################ */
+
+/* Start footer */
+@import "footer";
+
+/* End footer */
+/* ############################################# */
+
+// import the file of media queries
+@import "homePageMediaQueries";
